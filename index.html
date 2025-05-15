@@ -39,7 +39,7 @@
             <div id="header-sm">
                <div class="col-md-3 logo"> <a href="index.html"><img src="images/mojoomla_logo.jpg" width="150" id="img-logo" alt="logo"></a> </div>
                <div class="col-md-8 col-md-offset-1 desc">
-                  <h4 class="slight">Apartment App - Apartment Management System</h4>
+                  <h4 class="slight">Apartment App - Apartment Management Systemm</h4>
                   <h5 class="slight"><small>Documented by Mojoomla - at April 06 2024</small></h5>
                </div>
             </div>
@@ -48,6 +48,7 @@
                   <div class="logo"> <img src="images/mojoomla_logo.png" id="img-logo" alt="mojoomla" style="margin-bottom:20px;"> </div>
                   <ul id="top-menu">
                      <li><a href="#introduction">Introduction</a></li>
+					 <li><a href="#Api-section">API section</a></li>
                      <li><a href="#setting-up-android-project">setting up flutter Project</a></li>
                      <li><a href="#flutter-version">Flutter Version</a></li>
                      <li><a href="#change-application-name">Change Application Name</a></li>
@@ -61,7 +62,12 @@
                         <ul>
                            <li><a href="#fronted-login">Login Screen</a></li>
                            <li><a href="#dashboard-view">Dashboard Screen</a></li>
-                           <li><a href="#Profile-detaiils">Member Details Screen</a></li>
+                       <li><a href="#member_view">Member View</a>
+
+
+
+					
+						   
 						   
                         </ul>
                      </li>
@@ -83,11 +89,24 @@
                   <h3><strong>A) <u>Introduction</u> </strong></h3>
                   <p align="justify">Apartment Management System for wordpress plugin is ideal way to manage complete housing society or neighborhood maintenance tasks. It has different user roles like Resident members,Staff members, Gatekeeper and Accountant Users.
 				 </section>
+				 
+  <section id="Api-section">
+			<h3><strong>B)<u>API Section</u> </strong></h3>
+			<p>Before start using the application need to complete API setup, follow below steps to activate API from the WordPress backend
+					<ol>
+					<li>Copy API.zip file that you get with application</li>
+					<li>Put API folder at WordPress backend at 'wp-content\plugins\apartment-management' and extract it
+					</li>
+<li>Add this line "require_once AMS_PLUGIN_DIR . '/api/apartment-api-files.php';" at "wp-content\plugins\apartment-management\apartment-management.php""
+					</li>
+					<li>After following the above steps API will be activated</li>
+				</ol>
+		</section>
+
 			   <section id="setting-up-android-project">
                   <hr class="vertical-space2">
-                  <h3><strong>B) <u>Setting up flutter project</u></strong></h3>
-                  <br>
-                  <h5><strong>1. <u>Requirement</u></strong></h5>
+                  <h3><strong>C)<u>Setting up flutter project</u></strong></h3>
+                  <h5><strong>1.<u>Requirement</u></strong></h5>
                   <ol >
                      <li>Latest <a href="http://developer.android.com/sdk/index.html" target="_blank">Android Studio</a></li>
                      <li>Windows XP (32-bit), Vista (32- or 64-bit), or Windows 7 And up (32- or 64-bit) </li>
@@ -122,7 +141,7 @@
                <section id = "flutter-version">
                   <h3><strong>C) <u>Flutter Version</u></strong></h3>
                   <p>environment: </br>
-                     sdk: '>=2.19.6 <3.0.0' 
+                     sdk: '3.29.3' 
                   </p>
                </section>
                <section id="change-application-name">
@@ -255,7 +274,7 @@
                   </br>    
                   <br>
 				  <section id="license_settings">
-					<h3><strong>H) <u>License Registration Settings</u></strong></h3>
+					<!--<h3><strong>H) <u>License Registration Settings</u></strong></h3>
                     <br>
 					<h4><strong>1)How to get License Key ?<strong></h4>
 					<br>
@@ -290,8 +309,25 @@
 					<img alt="" src="images/already_framed.png" height = "550" width = "300">
 					<p><strong>if any other issue raise then it will show this message</strong></p>
 					<li>There seems to be some problem please try after sometime or contact us on <Strong>sales@mojoomla.com</Strong></li>
-					<img alt="" src="images/something_other_framed.png" height = "550" width = "300">
+					<img alt="" src="images/something_other_framed.png" height = "550" width = "300">-->
+					
+					    <h3><strong>H) <u>License Registration Settings</u></strong></h3>
+<li>If you want to register the license,visit the Apartment website
+    and log in as an admin.
+</li>
+<li>Go to System Settings >> General Settings and click on the Mobile App Settings tab.</li>
+<li>In the License Verification section, fill in the required details, including the License Key and Email.
+After entering the details, click on Submit.</li>
+<br>
+ <img alt="" src="images/license_settings.png" width="400%">
+<br>
+<li>Once successful, a confirmation message will be displayed:
+"Mobile App License Verification completed successfully."</li><br>
+ <img alt="" src="images/license_registration_sucessfully.png" width="100%" >
+
 				  </section>
+				  
+				  
                   <section id="sign-your-release-build">
                      <h3><strong>I) <u>Sign your release build</u></strong></h3>
                      <br>
@@ -341,7 +377,7 @@
                         <h3><strong><u>Dashboard Screen</u></strong></h3>
                         <p> In the dashboard screen we have use the Webview.</p>
                         <p> Integrating a web view into Flutter dashboard can greatly enhance the functionality and user experience of your app, allowing you to seamlessly integrate web-based content alongside native features.</p>
-                     <li>Customize the WebView settings according to your requirements.</li>
+                     <li>Customize the WebView settings according to your requirements.</sli>
                      <li>Replace Api Base Url with the URL you want to load.</li>
 
                         <img alt="" src="images/dashboard_framed.png" height = "550" width = "300">
@@ -349,21 +385,160 @@
 						
                      </section>
                      <br>
-                     <section id = "Profile-detaiils">
+					 
+					 
+					 
+                     <section id = "member_view">
                         <h3><strong><u> Member Details Screen</u></strong></h3>
                         <strong> Member Information:</strong>
-						 <li><strong>General: </strong>It contains user information like (member type, email id, gender, date of birth), their bulding information like (building name, unit category, unit name, occupied by, occupied date) ,address Information like (city, state, country, zip code), Document information and invoice Information.</li>
-						 <li><strong>family Members:</strong> It displays a list of family Members. family Members includes photo,name and email Id,Member type, building name, Unit name, Mobile No.and action like view,edit,delete.also add family member.</li>
-						 <li><strong>Invoices:</strong> It displays a list of invoices. Invoice includes invoice number, building name, unit name, charge type, charge calculation, total amount, amount due, amount paid, payment status.</li>
-						 <li><strong>Complaint:</strong>It displays a list of Complaints. Complaint includes Complaint Nature,Complaint title, Created by ,Date,Complaint Status,description,resolution.</li>
-						 <li><strong>Document:</strong>It contains a list of Documents. Document includes Document title,Unit name,Submitted date ,description.</li>
+						<strong>General: </strong>It contains user information like (member type, email id, gender, date of birth), their building information like (building name, unit category, unit name, occupied by, occupied date), address information like (city, state, country, zip code), document information and invoice information.
+<br>
+<img alt="" src="images/members/member_dashboard.jpg" height="550" width="300"><br><br>
+<img alt="" src="images/members/member_drawer.jpg" height="550" width="300"><br><br><br>
+
+<strong>2) Residential Unit: </strong>It contains information for residential unit.
+<br>
+<img alt="" src="images/members/residential.jpg" height="550" width="300"><br><br>
+
+<strong>3) User Management</strong><br>
+
+<strong>a) Member: </strong>It contains member can view details.<br>
+<img alt="" src="images/members/view_member.jpg" height="550" width="300"><br><br>
+
+<strong>b) Staff Members: </strong>Here members can see all the staff member list.<br>
+<img alt="" src="images/members/staff_member.jpg" height="550" width="300"><br><br>
+
+<strong>c) Accountant: </strong>Here members can see all the Accountant list.<br>
+<img alt="" src="images/members/accountant.jpg" height="550" width="300"><br><br>
+
+<strong>d) GateKeeper: </strong>Here members can see all the GateKeeper list.<br>
+<img alt="" src="images/members/gate.jpg" height="550" width="300"><br><br>
+
+<strong>e) Committee Members: </strong>Here members can see all the Committee Members list.<br>
+<img alt="" src="images/members/committe.jpg" height="550" width="300"><br><br>
+
+<strong>4) Documents: </strong>Here members can see all documents list and can also add the documents.<br>
+<img alt="" src="images/members/documents.jpg" height="550" width="300"><br><br>
+
+<strong>5) Complaints: </strong>Here members can see and add complaints.<br>
+<img alt="" src="images/members/complaint.jpg" height="550" width="300"><br><br>
+
+<strong>6) Parking Management</strong><br><br>
+
+<strong>a) Slot: </strong>This is slot screen.<br>
+<img alt="" src="images/members/slot.jpg" height="550" width="300"><br><br>
+
+<strong>b) Assign Slot: </strong>This is assign slot screen.<br>
+<img alt="" src="images/members/assign_slot.jpg" height="550" width="300"><br><br>
+
+<strong>7) Visitors Management</strong><br><br>
+
+<strong>a) Manage Gates: </strong>This is manage gates screen.<br>
+<img alt="" src="images/members/manage_gate.jpg" height="550" width="300"><br><br>
+
+<strong>b) Visitor Request: </strong>This is visitor request screen.<br>
+<img alt="" src="images/members/visitor.jpg" height="550" width="300"><br><br>
+
+<strong>c) Staff Check In: </strong>This is staff check-in screen.<br>
+<img alt="" src="images/members/check.jpg" height="550" width="300"><br><br>
+
+<strong>8) Notification:</strong><br><br>
+
+<strong>a) Notice: </strong>This is notice screen.<br>
+<img alt="" src="images/members/notice.jpg" height="550" width="300"><br><br>
+
+<strong>b) Event: </strong>This is event screen.<br>
+<img alt="" src="images/members/event.jpg" height="550" width="300"><br><br>
+
+<strong>c) Message: </strong>This is message screen.<br>
+<img alt="" src="images/members/message.jpg" height="550" width="300"><br><br>
+
+<strong>9) Service & Facility:</strong><br><br>
+
+<strong>a) Services: </strong>This is services screen.<br>
+<img alt="" src="images/members/services.jpg" height="550" width="300"><br><br>
+
+<strong>b) Facility: </strong>This is facility screen.<br>
+<img alt="" src="images/members/facility.jpg" height="550" width="300"><br><br>
+
+<strong>c) Booking Facility: </strong>This is booking facility screen.<br>
+<img alt="" src="images/members/booking.jpg" height="550" width="300"><br><br>
+
+<strong>10) Accounts:</strong><br><br>
+
+<strong>a) Invoice: </strong>This is invoice screen.<br>
+<img alt="" src="images/members/invoicee.jpg" height="550" width="300"><br><br>
+
+<strong>b) Charges: </strong>This is charges screen.<br>
+<img alt="" src="images/members/charges.jpg" height="550" width="300"><br><br>
+
+<strong>c) Expense: </strong>This is expense screen.<br>
+<img alt="" src="images/members/expense.jpg" height="550" width="300"><br><br>
+
+<strong>11) Assets & Inventory:</strong><br><br>
+
+<strong>a) Assets: </strong>This is assets screen.<br>
+<img alt="" src="images/members/assets.jpg" height="550" width="300"><br><br>
+
+<strong>b) Inventory: </strong>This is inventory screen.<br>
+<img alt="" src="images/members/inventory.jpg" height="550" width="300"><br><br>
+
+<strong>12) Report:</strong><br><br>
+
+<strong>a) Unit by Building: </strong>This is unit by building screen.<br>
+<img alt="" src="images/members/unit.jpg" height="550" width="300"><br><br>
+
+<strong>b) Members by Building: </strong>This is members by building screen.<br>
+<img alt="" src="images/members/building.jpg" height="550" width="300"><br><br>
+
+<strong>c) Finance/Payment: </strong>This is finance/payment screen.<br>
+<img alt="" src="images/members/income.jpg" height="550" width="300"><br><br>
+
+<strong>d) Complaint: </strong>This is complaint screen.<br>
+<img alt="" src="images/members/my_complaint.jpg" height="550" width="300"><br><br>
+
+<strong>13) Profile:</strong><br><br>
+<img alt="" src="images/members/profilee.jpg" height="550" width="300"><br><br>
+
+<strong>14) Other:</strong><br><br>
+
+<strong>a) FAQ: </strong>This is FAQ screen.<br>
+<img alt="" src="images/members/faq.jpg" height="550" width="300"><br><br>
+
+<strong>b) Society Rules: </strong>This is society rules screen.<br>
+<img alt="" src="images/members/society.jpg" height="550" width="300"><br><br>
+
+<strong>c) Gallery: </strong>This is gallery screen.<br>
+<img alt="" src="images/members/gallery.jpg" height="550" width="300"><br><br>
+
+   
+ 
+  
+					
+					<!--<li><strong>family Members:</strong> It displays a list of family Members. family Members includes photo,name and email Id,Member type, building name, Unit name, Mobile No.and action like view,edit,delete.also add family member.</li>
+						
+						<li><strong>Invoices:</strong> It displays a list of invoices. Invoice includes invoice number, building name, unit name, charge type, charge calculation, total amount, amount due, amount paid, payment status.</li>
+						
+						<li><strong>Complaint:</strong>It displays a list of Complaints. Complaint includes Complaint Nature,Complaint title, Created by ,Date,Complaint Status,description,resolution.</li>
+						
+						<li><strong>Document:</strong>It contains a list of Documents. Document includes Document title,Unit name,Submitted date ,description.</li>
+						 
 						 <li><strong>Facility Booking:</strong> Facility booking includes Facility name,book for, start and End date ,Start and End Time,Booking date ,charge and status.</li>
-                     <li><strong>Notice:</strong>It displays a list of Notices.Notice includes Notice title,start and End date,notice type,status. </li>
-                     <li><strong>Event:</strong> It contains a Event's list.Event includes Event title,start and end date,start and end time .</li>
-                     <li><strong>Messages:</strong> It contains sender name, subject,comment,date.</li>
+                    
+					<li><strong>Notice:</strong>It displays a list of Notices.Notice includes Notice title,start and End date,notice type,status. </li>
+                
+					<li><strong>Event:</strong> It contains a Event's list.Event includes Event title,start and end date,start and end time .</li>
                      
-					 <img alt="" src="images/view_member_framed.png" height = "550" width = "300">
+					 <li><strong>Messages:</strong> It contains sender name, subject,comment,date.</li>
+                     
+					 <img alt="" src="images/view_member_framed.png" height = "550" width = "300">-->
                      </section>
+					 
+					 
+					 
+                  
+					 
+					 
                      <!-- start-footer-->
                      <div id="footer"> © 2024 Mojoomla All Rights Reserved. </div>
                      <!-- end-footer -->
